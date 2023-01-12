@@ -101,12 +101,70 @@ Visualizing top and bottom 10 countries based on cancellations.
 1. Since most of the customers are wholesalers we cannot group customers based on the demographic group like age, gender, income and behavioral and psycho-graphic group Because Our Customers purchase bunch of goods from us and sell it to individual customers.
 2. We only need to deal issues and make clusters related to B2B Business to Business instead of B2C i.e. Direct from Business to Customers WHY BECAUSE PEOPLE WHO PURCHASE PRODUCTS FROM US DO NOT UTILIZE IT They sell it to individual customers(B2C) or sell all products to another stores (B2B).
 3. Due to all these reasons we need to cluster customers according to there activities i.e
-  1 R-Recency
-  2 F-Frequency
-  3 M-Monetary
+  1. R-Recency
+  2. F-Frequency
+  3. M-Monetary
+  
+  
+Adding 1 date to the last invoice date to set as latest date for reference.
+
+Creating a new dataframe to calculate Recency, Frequency and Monetary scores for each customer.
+
+Remaining the columns 'InvoiceDate' to 'Recency', 'InvoiceNo' to 'Frequency', 'TotalAmount' to 'Monetary'.
+                    
+Interpretation:
+1. Recency: How recent a customer made a purchase.
+2. Frequency: How often a customer makes a purchase.
+3. Monetary: How much money a customer spends.                    
+
+Calculating R, F and M scores by splitting Recency, Frequency	and Monetary based on quantiles.
+
+1.  If the RFM of any customer is 444. His Recency is good, frequency is more and Monetary is more. So, he is the best customer.
+2. If the RFM of any customer is 111. His Recency is low, frequency is low and Monetary is low. So, he is the churning customer.
+3. If the RFM of any customer is 144. He purchased a long time ago but buys frequently and spends more. And so on.
+4. Like this we can come up with number of segments for all combinations of R,F and M base on our usecase. Higher the RFM score, more valuable the customer is.
+
+Handling the zeros in the dataframe to avoid error in transformations.
+
+Applying log transformation on columns for smoothening the distribution.
+
+Visualizing the correlation heatmap on RFM dataset.
 
 
+![Screenshot (78)](https://user-images.githubusercontent.com/67784512/212060239-3ac6ca6f-f16b-4c20-bf0e-97c351d9f858.png)
 
+Initializing an empty dictinory to store stats and summary of all the cluster.
+
+Define a function to remove outliers.
+
+Function for displaying the stats of Recency, Frequency and Monetary for each group.
+
+Storing mean median and count of recency, Frequency and Monetary for each group.
+
+Storing 0.25 and 0.75 quantile of Recency, Frequency and Monetary for each group.
+
+Changing name for the columns.
+
+Defining a function for plotting clusterfor visualization.
+
+defining viualizing part
+
+Part1 : Visyualizing the scatter plots for all clusters.
+
+Part2 : Plotting the distribution.
+
+Part3 : Displaying the stats and summary.
+
+We started with Binning RFM Score, Quantile Based Clustering, K-Means Clustering for finding value k we use elbow method. And, next move to Hierarchical Clustering here we use dendogram to find value of k. And, we end with DBScan Clusters algorithm.
+
+# Conclusion
+
+1. We started with a simple binning and quantile based simple segmentation model first then moved to more complex models because simple implementation helps having a first glance at the data and know where/how to exploit it better.
+2. Then we moved to k-means clustering and visualized the results with different number of clusters. As we know there is no assurance that k-means will lead to the global best solution. We moved forward and tried Hierarchical Clustering and DBSCAN clusterer as well.
+3. We created several useful clusters of customers on the basis of different metrics and methods to cateorize the customers on the basis of their beavioural attributes to define their valuability, loyality, profitability etc for the business. Though significantly separated clusters are not visible in the plots, but the clusters obtained is fairly valid and useful as per the algorithms and the statistics extracted from the data.
+4. Segments depends on how the business plans to use the results, and the level of granularity they want to see in the clusters. Keeping these points in view we clustered the major segments based on our understanding as per diffrent criteria as shown in the summary dataframe.
+
+We also ploted helper function to understand easy way how each algorithms are working.
 
 
  
