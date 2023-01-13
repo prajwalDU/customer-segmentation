@@ -99,10 +99,7 @@ Visualizing top and bottom 10 countries based on cancellations.
 
 1. Since most of the customers are wholesalers we cannot group customers based on the demographic group like age, gender, income and behavioral and psycho-graphic group Because Our Customers purchase bunch of goods from us and sell it to individual customers.
 2. We only need to deal issues and make clusters related to B2B Business to Business instead of B2C i.e. Direct from Business to Customers WHY BECAUSE PEOPLE WHO PURCHASE PRODUCTS FROM US DO NOT UTILIZE IT They sell it to individual customers(B2C) or sell all products to another stores (B2B).
-3. Due to all these reasons we need to cluster customers according to there activities i.e
-  1. R-Recency
-  2. F-Frequency
-  3. M-Monetary
+3. Due to all these reasons we need to cluster customers according to there activities i.e 1 R-Recency, 2 F-Frequency, 3 M-Monetary.
   
   
 Adding 1 date to the last invoice date to set as latest date for reference.
