@@ -144,6 +144,8 @@ Storing 0.25 and 0.75 quantile of Recency, Frequency and Monetary for each group
 
 Changing name for the columns.
 
+# Model building
+
 Defining a function for plotting clusterfor visualization.
 
 defining viualizing part
@@ -154,7 +156,17 @@ Part2 : Plotting the distribution.
 
 Part3 : Displaying the stats and summary.
 
-We started with Binning RFM Score, Quantile Based Clustering, K-Means Clustering for finding value k we use elbow method. And, next move to Hierarchical Clustering here we use dendogram to find value of k. And, we end with DBScan Clusters algorithm.
+# Algorithms we used
+1. Binning RFM Score - This is the basic algorithm we implemented this just for to understanding the data.
+
+2. Quantile Based Clustering
+
+3. K-Means Clustering - In K-means algorithms we use elbow method to find the value of 'K'. We now that k-means algorithmn always gives better result, to understand other algorithmns we just implement and comparing results.
+
+4. Hierarchical Clustering - In hierarchical clustering we use dendogram to find the value of 'K',
+
+5. DBScan Clusters algorithm
+
 
 # Conclusion
 
@@ -163,7 +175,7 @@ We started with Binning RFM Score, Quantile Based Clustering, K-Means Clustering
 3. We created several useful clusters of customers on the basis of different metrics and methods to cateorize the customers on the basis of their beavioural attributes to define their valuability, loyality, profitability etc for the business. Though significantly separated clusters are not visible in the plots, but the clusters obtained is fairly valid and useful as per the algorithms and the statistics extracted from the data.
 4. Segments depends on how the business plans to use the results, and the level of granularity they want to see in the clusters. Keeping these points in view we clustered the major segments based on our understanding as per diffrent criteria as shown in the summary dataframe.
 
-We also ploted helper function to understand easy way how each algorithms are working.
+We also plotted helper function to understand easy way how each algorithms are working.
 
 
  
