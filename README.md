@@ -42,7 +42,7 @@ Checking cancellation using InvoiceNo. We have total 401604 InvoiceNo in that we
 Drop the rows which contain 'C' in our main dataset.
 
 
-# EDA = Exploratory Data Analysis
+# EDA - Exploratory Data Analysis
 
 Visualizing the variables using bar plot, on it we observed some below points.
 
